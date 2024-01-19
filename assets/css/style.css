@@ -576,7 +576,10 @@ footer{
   h3.modal-item{
     color: #555;
   }
-  
+  img.modal-item{
+    width: 60%;
+    border: 1px solid black ;
+  }
   .modal-item{
     margin: 5px;
   }
@@ -596,8 +599,6 @@ footer{
 	cursor: pointer;
   }
   
-  
-
 
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
 @media only screen and (max-width: 1110px){
@@ -619,6 +620,10 @@ footer{
 
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 955px) {
+    .modal{
+        width: 70%;
+        height: 70%;
+    }
     .scroll-btn{
         display: none;
     }
@@ -709,7 +714,13 @@ footer{
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 
 @media only screen and (max-width: 540px){
-
+    .modal{
+        width: 85%;
+        height: 70%;
+    }
+    img.modal-item{
+        width: 90%;
+    }
     .section{
         padding-top: 2em;
     }
