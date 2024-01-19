@@ -614,6 +614,9 @@ footer{
 
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 955px) {
+    .scroll-btn{
+        display: none;
+    }
     .nav-button{
         display: none;
     }
