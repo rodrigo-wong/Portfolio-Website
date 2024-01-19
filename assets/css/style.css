@@ -614,9 +614,7 @@ footer{
 
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 955px) {
-    .scroll-btn{
-        display: none;
-    }
+
     .nav-button{
         display: none;
     }
@@ -655,7 +653,7 @@ footer{
         order: 2;
         justify-content: center;
         align-content: flex-start;
-        min-height: 60vh;
+        min-height: 40vh;
     }
     .social_icons{
         margin-top: 2em;
@@ -665,12 +663,11 @@ footer{
         justify-content: center;
         min-height: 300px;
         width: 100%;
-        margin-top: 200px;
         padding-right: 0px;
     }
     .image, .image img{
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
     }
     .row{
         display: flex;
@@ -712,12 +709,11 @@ footer{
         width: 100%;
     }
     .featured-image{
-        margin-top: 125px;
         height: 200px;
         width: 100%;
     }
     .image, .image img{
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
     }
 }
