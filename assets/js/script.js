@@ -7,29 +7,47 @@ function myMenuFunction(){
   } else {
     menuBtn.className = "nav-menu";
   }
+
+}
+// Function to close the menu when a nav link is clicked
+function closeMenu() {
+  var menuBtn = document.getElementById("myNavMenu");
+  menuBtn.className = "nav-menu";
 }
 
-/* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
-window.onscroll = function() {headerShadow()};
+// Add event listeners to nav links
+document.addEventListener("DOMContentLoaded", function() {
+  var navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach(function(link) {
+    link.addEventListener("click", closeMenu);
+  });
+});
 
-function headerShadow() {
-  const navHeader =document.getElementById("header");
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  const icon = document.getElementById('darkModeToggle');
+  icon.classList.toggle('uil-moon');
+  icon.classList.toggle('uil-sun');
+}
 
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
-
-    navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-    navHeader.style.height = "70px";
-    navHeader.style.lineHeight = "70px";
-
-  } else {
-
-    navHeader.style.boxShadow = "none";
-    navHeader.style.height = "90px";
-    navHeader.style.lineHeight = "90px";
-
+// Event listener to keep dark mode preference
+window.onload = () => {
+  const darkMode = localStorage.getItem('dark-mode');
+  if (darkMode === 'enabled') {
+      document.body.classList.add('dark-mode');
+      document.getElementById('darkModeToggle').classList.add('uil-sun');
+      document.getElementById('darkModeToggle').classList.remove('uil-moon');
   }
-}
+};
 
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  const darkMode = document.body.classList.contains('dark-mode') ? 'enabled' : 'disabled';
+  localStorage.setItem('dark-mode', darkMode);
+  const icon = document.getElementById('darkModeToggle');
+  icon.classList.toggle('uil-moon');
+  icon.classList.toggle('uil-sun');
+}
 
 /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
 const sr = ScrollReveal({
@@ -85,29 +103,31 @@ srRight.reveal('.form-control',{delay: 100})
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive() {
-const scrollY = window.scrollY;
+  const scrollY = window.scrollY;
 
-sections.forEach(current =>{
-  const sectionHeight = current.offsetHeight,
-      sectionTop = current.offsetTop - 50,
-    sectionId = current.getAttribute('id')
+  sections.forEach(current =>{
+    const sectionHeight = current.offsetHeight,
+        sectionTop = current.offsetTop - 50,
+      sectionId = current.getAttribute('id')
 
-  if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) { 
+    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) { 
 
-      document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
+        document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
 
-  }  else {
+    }  else {
 
-    document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
+      document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
 
-  }
-})
+    }
+  })
 }
 
 document.addEventListener('DOMContentLoaded', function () {
   var modals = document.getElementsByClassName("modal");
   var modalButtons = document.querySelectorAll("[id^='openModal']");
   var closeButtons = document.getElementsByClassName("close");
+
+
 
   // Function to open a modal
   function openModal(modalId) {
