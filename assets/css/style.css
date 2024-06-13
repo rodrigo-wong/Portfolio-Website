@@ -222,6 +222,29 @@ nav {
     color: var(--text-color-second);
 }
 
+.dark-mode .about-info p,
+.dark-mode .project-box label,
+.dark-mode .modal-item a,
+.dark-mode .bottom-footer a {
+    color: var(--text-color-second-dark);
+}
+.dark-mode .about-info h3,
+.dark-mode .skills-box span,
+.dark-mode .top-header h1,
+.dark-mode .featured-name p,
+.dark-mode .top-footer p,
+.dark-mode .skills-header h3,
+.dark-mode .modal-content h3,
+.dark-mode .modal-item strong,
+.dark-mode .contact-info h2,
+.dark-mode .contact-info p {
+    color: var(--text-color-third-dark);
+}
+
+.dark-mode .modal {
+    background-color: var(--body-color-dark);
+}
+
 /* Increase size of dark mode toggle icon */
 .nav-dark-mode-btn i {
     font-size: 30px;
@@ -404,19 +427,6 @@ label {
     text-align: center;
     font-size: 15px;
     color: #777;
-}
-
-.dark-mode .about-info p,
-.dark-mode .project-box label {
-    color: var(--text-color-second-dark);
-}
-.dark-mode .about-info h3,
-.dark-mode .skills-box span,
-.dark-mode .top-header h1,
-.dark-mode .featured-name p,
-.dark-mode .top-footer p,
-.dark-mode .skills-header h3 {
-    color: var(--text-color-third-dark);
 }
 
 .about-btn button {
