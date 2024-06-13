@@ -405,6 +405,20 @@ label {
     font-size: 15px;
     color: #777;
 }
+
+.dark-mode .about-info p,
+.dark-mode .project-box label {
+    color: var(--text-color-second-dark);
+}
+.dark-mode .about-info h3,
+.dark-mode .skills-box span,
+.dark-mode .top-header h1,
+.dark-mode .featured-name p,
+.dark-mode .top-footer p,
+.dark-mode .skills-header h3 {
+    color: var(--text-color-third-dark);
+}
+
 .about-btn button {
     position: absolute;
     right: 20px;
@@ -678,10 +692,13 @@ img.modal-item {
         width: 350px;
         height: 350px;
     }
+    .nav-menu {
+        background-color: var(--color-white-dark);
+    }
 }
 
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
-@media only screen and (max-width: 955px) {
+@media only screen and (max-width: 967px) {
     .modal {
         width: 70%;
         height: 70%;
@@ -708,7 +725,6 @@ img.modal-item {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(20px);
         width: 100%;
         min-height: 450px;
