@@ -242,7 +242,7 @@ nav {
 }
 
 .dark-mode .modal {
-    background-color: var(--body-color-dark);
+    background-color: var(--color-white-dark);
 }
 
 /* Increase size of dark mode toggle icon */
