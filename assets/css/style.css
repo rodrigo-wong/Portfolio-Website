@@ -187,6 +187,7 @@ nav {
     background-color: var(--body-color);
     color: var(--fourth-color);
 }
+
 .dark-mode .nav-link {
     color: var(--text-color-second);
 }
@@ -732,6 +733,8 @@ img.modal-item {
         position: fixed;
         top: 80px;
         left: -100%;
+        align-self: center;
+        text-align: center;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -797,11 +800,17 @@ img.modal-item {
     .nav-dark-mode-btn {
         display: none;
     }
+    .featured-image {
+        padding-top: 2em;
+    }
 }
 
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 @media only screen and (max-width: 540px) {
 
+    .featured-image {
+        padding-top: 0em;
+    }
     .modal {
         width: 85%;
         height: 70%;
