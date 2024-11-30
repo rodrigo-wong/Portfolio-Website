@@ -375,7 +375,7 @@ nav {
 
 /* ----- MAIN BOX ----- */
 .section {
-    padding-top: 5em;
+    padding-top: 6em;
 }
 .row {
     display: flex;
@@ -683,7 +683,7 @@ img.modal-item {
 }
 .close:hover,
 .close:focus {
-    color: black;
+    color: var(--second-color);
     text-decoration: none;
     cursor: pointer;
 }
