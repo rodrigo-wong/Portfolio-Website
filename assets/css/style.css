@@ -703,9 +703,6 @@ img.modal-item {
         width: 350px;
         height: 350px;
     }
-    .nav-menu {
-        background-color: var(--color-white-dark);
-    }
 }
 
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
@@ -738,7 +735,7 @@ img.modal-item {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        backdrop-filter: blur(20px);
+        background-color: var(--color-white);
         width: 100%;
         min-height: 450px;
         height: 90vh;
