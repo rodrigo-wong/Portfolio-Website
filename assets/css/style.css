@@ -417,7 +417,7 @@ label {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-block: 30px 70px;
+    padding-block: 30px 30px;
     padding-inline: 20px;
     width: 100%;
     background: var(--color-white);
@@ -425,7 +425,7 @@ label {
     border-radius: 20px;
 }
 .about-info p {
-    text-align: center;
+    text-align: left;
     font-size: 15px;
     color: #777;
 }
