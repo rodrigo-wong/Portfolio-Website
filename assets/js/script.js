@@ -158,4 +158,32 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 });
 
+// Helper to close every modal
+function closeAllModals() {
+    document
+        .querySelectorAll(".modal")
+        .forEach((m) => (m.style.display = "none"));
+}
+
+// Prevent body-click close when clicking inside the modal content
+document.querySelectorAll(".modal").forEach((m) => {
+    m.addEventListener("click", (e) => {
+        // If your content has a .modal-content wrapper, prefer:
+        // if (e.target.closest('.modal-content')) e.stopPropagation();
+        // Otherwise, stop clicks inside the modal from bubbling to <body>
+        e.stopPropagation();
+    });
+});
+
+// Close modals when clicking on the body (anywhere outside modals/open buttons)
+document.body.addEventListener("click", (e) => {
+    // Ignore clicks that open modals
+    if (e.target.matches("[id^='openModal']")) return;
+
+    // Ignore clicks occurring inside any modal
+    if (e.target.closest(".modal")) return;
+
+    closeAllModals();
+});
+
 window.addEventListener("scroll", scrollActive);
