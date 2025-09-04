@@ -85,10 +85,10 @@
                         </div>
                         <div class="featured-text-info">
                             <p>
-                                Currently working as a Software Engineer at BASL
-                                Inc., where I actively pursue my passion for
+                                Currently working as a Software Engineer at Powered By ARC, 
+                                where I actively pursue my passion for
                                 developing innovative software solutions to
-                                complex challenges in the Real Estate sector.
+                                complex challenges.
                             </p>
                         </div>
                         <div class="featured-text-btn">
@@ -234,14 +234,23 @@
                             </button>
                         </div>
                         <div class="project-box">
-                            <img
-                                style="height: 75px"
-                                src="assets/images/logos/chatbot-logo.png"
-                                alt="MoChat"
-                            />
-                            <h3>Python-Chatbot</h3>
-                            <label>LSC - Mohawk College</label>
-                            <button id="openModal5" class="btn">
+                            <div
+                                style="
+                                    background-color: black;
+                                    padding: 10px;
+                                    border-radius: 8px;
+                                "
+                            >
+                                <img
+                                    style="height: 75px"
+                                    src="assets/images/logos/roomease-logo.svg"
+                                    alt="Roomease"
+                                />
+                            </div>
+
+                            <h3>Roomease</h3>
+                            <label>TexTV Studios</label>
+                            <button id="openModal6" class="btn">
                                 View Details
                             </button>
                         </div>
@@ -254,6 +263,18 @@
                             <h3>Vanish Vault</h3>
                             <label>Bell Geekfest Hackaton</label>
                             <button id="openModal2" class="btn">
+                                View Details
+                            </button>
+                        </div>
+                        <div class="project-box">
+                            <img
+                                style="height: 75px"
+                                src="assets/images/logos/chatbot-logo.png"
+                                alt="MoChat"
+                            />
+                            <h3>Python-Chatbot</h3>
+                            <label>LSC - Mohawk College</label>
+                            <button id="openModal5" class="btn">
                                 View Details
                             </button>
                         </div>
@@ -374,18 +395,6 @@
                             <h3>The Tanker</h3>
                             <label>Personal Project</label>
                             <button id="openModal8" class="btn">
-                                View Details
-                            </button>
-                        </div>
-                        <div class="project-box">
-                            <img
-                                style="height: 75px"
-                                src="assets/images/logos/quizzer-logo.png"
-                                alt="Quizzer"
-                            />
-                            <h3>Quizzer</h3>
-                            <label>LSC - Mohawk College</label>
-                            <button id="openModal6" class="btn">
                                 View Details
                             </button>
                         </div>
@@ -584,31 +593,38 @@
                     <div class="modal-content">
                         <span class="close" data-modal="6">×</span>
                         <div style="text-align: center">
-                            <h3 class="modal-item">Quizzer</h3>
+                            <h3 class="modal-item">Roomease</h3>
                             <div>
                                 <img
                                     class="modal-item"
-                                    src="/assets/images/demos/quizzer-demo.png"
-                                    alt="MoChat Demo"
+                                    src="/assets/images/demos/roomease-demo.png"
+                                    alt="Roomease Demo"
                                     style="width: 60%; border: 1px solid black"
                                 />
                             </div>
                         </div>
                         <p class="modal-item">
-                            <strong>Stack:</strong> Spring Boot, PostgreSQL,
-                            JPA, Hibernate
+                            <strong>Stack:</strong> Laravel, React.js, Inertia, MySQL
                         </p>
                         <p class="modal-item">
-                            <strong>Description:</strong> A REST API that
-                            generates randomized Python and Java questions for
-                            the PASS program at Mohawk College with the intent
-                            to provide additional practice material.
+                            <strong>Description:</strong> This is a booking system built using Laravel 11 with Inertia.js and React. It provides both admin and client-facing panels, Stripe payment integration, and automated emailing.
+                            
+                            <br>
+                            <strong>Features:</strong>
+                            <ul style="list-style-type: disc; margin-left: 40px">
+                                <li>Client-side booking with addons (contractors/products)</li>
+                                <li>Admin panel with full CRUD for rooms, products, contractors, and orders</li>
+                                <li>Automated email confirmation and service order broadcasting</li>
+                                <li>Stripe payment integration</li>
+                                <li>Admin invitations</li>
+                                <li>Booking conflict detection and prevention</li>
+                            </ul>
                         </p>
                         <p class="modal-item">
                             <strong>Source Code:</strong>
                             <a
-                                href="https://github.com/rodrigo-wong/QuizzerAPI-SpringBoot"
-                                >github.com/rodrigo-wong/QuizzerAPI-SpringBoot</a
+                                href="https://github.com/rodrigo-wong/Roomease---Laravel-React-Inertia"
+                                >github.com/rodrigo-wong/Roomease---Laravel-React-Inertia</a
                             >
                         </p>
                     </div>
